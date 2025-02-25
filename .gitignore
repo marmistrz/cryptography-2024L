@@ -11,3 +11,4 @@ LaTeX/lectures.pdf
 *.blg
 *.bbl
 *.tmp
+*.bbl-SAVE-ERROR
