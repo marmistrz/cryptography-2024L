@@ -1,0 +1,114 @@
+
+%% Save the class definition of \subparagraph
+\let\llncssubparagraph\subparagraph
+%% Provide a definition to \subparagraph to keep titlesec happy
+\let\subparagraph\paragraph
+%% Load titlesec
+\usepackage[compact]{titlesec}
+%% Revert \subparagraph to the llncs definition
+\let\subparagraph\llncssubparagraph
+
+
+%\titleclass{\ex}{straight}[\section]
+%\newcounter{ex}
+
+\usepackage{enumitem}
+
+\usepackage[
+n,
+operators,
+advantage,
+sets,
+adversary,
+landau,
+probability,
+notions,	
+logic,
+ff,
+mm,
+primitives,
+events,
+complexity,
+asymptotics,
+keys]{cryptocode}
+
+\newenvironment{sol}{\par\noindent\rule{\textwidth}{0.4pt}
+\paragraph{Solution:}}{\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+
+\usepackage{wrapfig}
+\usepackage{framed}
+\usepackage[margin=2.5cm]{geometry}
+
+
+\newcommand{\half}{{\textstyle\frac{1}{2}}}
+
+\newcommand{\SD}[2]{\Delta(#1 \: ;  #2)}
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cQ}{{\mathcal Q}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cX}{{\mathcal X}}
+\newcommand{\cY}{{\mathcal Y}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cW}{{\mathcal W}}
+
+
+\usepackage{fullpage}
+
+
+%\titleformat{\ex}{\normalsize\bfseries}{}{0em}{Exercise \theex:~}
+%\titlespacing*{\ex}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\renewcommand{\thesection}{Lecture \arabic{section}}
+
+\renewcommand{\thesubsection}{Lecture \arabic{section}.\arabic{subsection}}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newcommand{\DES}{{\mathsf{DES}}}
+\newcommand{\negate}[1]{\overline{#1}}
+\newcommand{\polyn}{\mathsf{poly}}
+\newcommand{\Tag}{\mathsf{Tag}}
+
+\newcommand{\PRNG}{\mathsf{PRNG}}
+
+\newcommand{\suffix}{\mathsf{suffix}}
+\newcommand{\CRT}{\mathsf{CRT}}
+\newcommand{\puzzle}{\mathsf{puzzle}}
+
+%\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bins}{\bin^*}
+\newcommand{\conc}{\: || \:}
+
+\usepackage{mdframed}
+
+\mdfdefinestyle{protstyle}{%
+        userdefinedwidth=.5\linewidth,
+        align=center,
+	linecolor=black,linewidth=1.5pt,%
+	frametitlerule=true,%
+	frametitlebackgroundcolor=gray!20,
+	innertopmargin=\topskip,
+        skipabove=12pt,
+}
+
+\newenvironment{prot}[1]{\begin{mdframed}[style=protstyle,frametitle={#1}]}{\end{mdframed}\vspace{.3cm}}

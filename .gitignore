@@ -1,0 +1,10 @@
+*.bcf
+*.fls
+*.aux
+*.log
+*.fdb_latexmk
+*.xml
+*.gz
+*.bak
+*.sav
+LaTeX/lectures.pdf
