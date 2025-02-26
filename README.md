@@ -11,6 +11,6 @@ This is a repo for the [Cryptography 2](https://usosweb.uw.edu.pl/kontroler.php?
 
 **Exercises**: 
  - Mondays 14:15 - 15:45, room 3140
- - Wednesdays 16:15 - 17:45. room 3160
+ - Wednesdays 16:15 - 17:45, room 3160
 
 Notes from the lecture and the exercises are available in the [LaTeX folder](https://github.com/marmistrz/cryptography-2024L/tree/master/LaTeX).
