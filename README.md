@@ -1,4 +1,4 @@
-# cryptography-2024L
+# Cryptography 2
 
 
 This is a repo for the [Cryptography 2](https://usosweb.uw.edu.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&kod=1000-2M24KI2&lang=en) course taught at the University of Warsaw in the summer semester of the academic year 2024/25.
