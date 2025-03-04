@@ -7,14 +7,14 @@
 
 \input{macros}
 
-\renewcommand{\thesection}{Lecture \arabic{section}:}
 
-\renewcommand{\thesubsection}{Lecture \arabic{section}.\arabic{subsection}}
+\renewcommand{\thesection}{Classes \arabic{section}:}
 
+\renewcommand{\thesubsection}{Classes \arabic{section}.\arabic{subsection}}
 
 \title{Cryptography II\\ 2024/25}
 \subtitle{\textcolor{red}{Lecture notes under construction}}
-\author{Stefan Dziembowski}
+\author{Pawel Kedzior and Marcin Mielniczuk}
 
 
 \institute{University of Warsaw}
@@ -25,23 +25,22 @@
 
 \section{Elliptic Curve Cryptography and Bilinear Pairings (part 1)}
 
-\DATE{Feb 24}
+\DATE{Feb 24/26}
 
-\paragraph{Content:} We gave a general introduction to the elliptic curve cryptography and bilinear pairings. We defined elliptic curves and their group law, and we discussed the discrete logarithm problem in the context of elliptic curves. We also introduced the notion of bilinear pairings and discussed their applications in cryptography. We then presented the construction of the BLS signature scheme \cite{Boneh2001} (the proof was given in the exercise class after the lecture).
-
-\paragraph{Material:} We mostly followed the Boneh-Shoup book \cite{Boneh2023} (pages 615--618, second half of page 619, Section 15.4 until the middle of page 628). Another good reference are the online lectures \cite{WinterSchool} (lectures: ``School overview'' and ``The Basics of Pairings'').
-
+\begin{itemize}
+    \item Tripartite Diffie-Hellman key exchange \cite[Section 3.2]{tdh}.
+    \item Proof of the BLS signature scheme \cite[Theorem 15.1]{Boneh2023}.
+\end{itemize}
 
 
 \section{Elliptic Curve Cryptography and Bilinear Pairings (part 2)}
 
-\DATE{Mar 03}
+\DATE{Mar 03/05}
 
-\paragraph{Content:} We continued the discussion of bilinear pairings. We presented (a variant of) a construction of the Boneh-Franklin identity-based encryption scheme \cite{Boneh2003}.
-
-\paragraph{Material:} We again followed the Boneh-Shoup book \cite{Boneh2023} (pages 643--646 and 648-650, without a security proof, which was covered in the exercises). See also \cite{WinterSchool}, lecture ``Identity-Based Encryption and Variants''.
-''
-
+\begin{itemize}
+    \item Searching on PKE-encrypted data from IBE \cite[Section 15.6.4.3]{Boneh2023}.
+    \item Proof of the Boneh-Franklin IBE scheme \cite[Theorem 15.6]{Boneh2023}.
+\end{itemize}
 
 
 \section{Zero-Knowledge and Interactive Proofs (part 1)}

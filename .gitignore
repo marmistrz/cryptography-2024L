@@ -12,3 +12,4 @@ LaTeX/lectures.pdf
 *.bbl
 *.tmp
 *.bbl-SAVE-ERROR
+build
