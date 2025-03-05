@@ -13,3 +13,6 @@ LaTeX/lectures.pdf
 *.tmp
 *.bbl-SAVE-ERROR
 build
+LaTeX/lectures.out
+LaTeX/classes.pdf
+*.out
