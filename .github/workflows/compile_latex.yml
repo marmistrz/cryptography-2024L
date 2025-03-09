@@ -1,0 +1,36 @@
+name: Compile LaTeX Documents
+
+on:
+  push:
+    paths:
+      - 'LaTeX/**' 
+  pull_request:
+    paths:
+      - 'LaTeX/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up LaTeX
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: |
+          LaTeX/lectures.tex
+          LaTeX/classes.tex
+        
+    - name: Create output directory
+      run: |
+        mkdir -p compiled_pdfs
+        cp LaTeX/*.pdf compiled_pdfs/ || true
+
+    - name: Upload compiled PDFs as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: compiled-pdfs
+        path: compiled_pdfs/
