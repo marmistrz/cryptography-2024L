@@ -20,19 +20,15 @@ jobs:
           lectures.tex
           classes.tex
         working_directory: LaTeX
-        args: -interaction=nonstopmode -file-line-error
-        extra_system_packages: "biber"
-        texlive_package: "texlive-pdftex"
+        args: -pdf -interaction=nonstopmode -file-line-error
+        extra_system_packages: biber
+        extra_packages: texlive-latex-extra texlive-fonts-recommended
+        compiler: pdflatex
         
-    - name: Create output directory
+    - name: Create output directory and copy PDFs
       run: |
         mkdir -p compiled_pdfs
-        cp LaTeX/*.pdf compiled_pdfs/ || true
-        
-    - name: List generated files
-      run: |
-        ls -la LaTeX/
-        ls -la compiled_pdfs/ || echo "No PDF files found in compiled_pdfs"
+        cp LaTeX/*.pdf compiled_pdfs/ || echo "No PDFs to copy"
         
     - name: Upload compiled PDFs as artifacts
       uses: actions/upload-artifact@v4
