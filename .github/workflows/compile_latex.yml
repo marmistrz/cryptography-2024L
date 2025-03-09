@@ -12,12 +12,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       
-    - name: Set up LaTeX
+    - name: Set up LaTeX environment
       uses: xu-cheng/latex-action@v2
       with:
         root_file: |
           LaTeX/lectures.tex
           LaTeX/classes.tex
+        working_directory: .
+        args: -interaction=nonstopmode -file-line-error
+        extra_system_packages: "biber"
         
     - name: Create output directory
       run: |
@@ -25,7 +28,7 @@ jobs:
         cp LaTeX/*.pdf compiled_pdfs/ || true
 
     - name: Upload compiled PDFs as artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: compiled-pdfs
         path: compiled_pdfs/
