@@ -13,30 +13,25 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       
-    - name: Install TeXLive
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y texlive-full biber
-        
-    - name: Compile LaTeX documents
-      run: |
-        cd LaTeX
-        pdflatex -interaction=nonstopmode -file-line-error lectures.tex
-        biber lectures
-        pdflatex -interaction=nonstopmode -file-line-error lectures.tex
-        pdflatex -interaction=nonstopmode -file-line-error lectures.tex
-        
-        pdflatex -interaction=nonstopmode -file-line-error classes.tex
-        biber classes
-        pdflatex -interaction=nonstopmode -file-line-error classes.tex
-        pdflatex -interaction=nonstopmode -file-line-error classes.tex
-        
-        ls -la *.pdf
+    - name: Set up LaTeX environment
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: |
+          lectures.tex
+          classes.tex
+        working_directory: LaTeX
+        args: -interaction=nonstopmode -file-line-error
+        extra_system_packages: "biber"
         
     - name: Create output directory
       run: |
         mkdir -p compiled_pdfs
         cp LaTeX/*.pdf compiled_pdfs/ || true
+        
+    - name: List generated files
+      run: |
+        ls -la LaTeX/
+        ls -la compiled_pdfs/ || echo "No PDF files found in compiled_pdfs"
         
     - name: Upload compiled PDFs as artifacts
       uses: actions/upload-artifact@v4
