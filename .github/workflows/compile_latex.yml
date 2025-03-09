@@ -20,26 +20,7 @@ jobs:
           lectures.tex
           classes.tex
         working_directory: LaTeX
-        args: -pdf -interaction=nonstopmode -file-line-error
-        extra_system_packages: biber
-        compiler: pdflatex
-        
-    - name: Run Biber for Bibliography
-      run: |
-        cd LaTeX
-        biber lectures
-        biber classes
-        
-    - name: Recompile LaTeX documents
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: |
-          lectures.tex
-          classes.tex
-        working_directory: LaTeX
-        args: -pdf -interaction=nonstopmode -file-line-error
-        extra_system_packages: biber
-        compiler: pdflatex
+        args: "-lualatex -file-line-error -interaction=nonstopmode"
         
     - name: Create output directory and copy PDFs
       run: |
