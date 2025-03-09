@@ -22,7 +22,6 @@ jobs:
         working_directory: LaTeX
         args: -pdf -interaction=nonstopmode -file-line-error
         extra_system_packages: biber
-        extra_packages: texlive-latex-extra texlive-fonts-recommended
         compiler: pdflatex
         
     - name: Create output directory and copy PDFs
