@@ -13,4 +13,12 @@ This is a repo for the [Cryptography 2](https://usosweb.uw.edu.pl/kontroler.php?
  - Mondays 14:15 - 15:45, room 3140
  - Wednesdays 16:15 - 17:45, room 3160
 
+## Notes 
+
 Notes from the lecture and the exercises are available in the [LaTeX folder](https://github.com/marmistrz/cryptography-2024L/tree/master/LaTeX).
+
+### Accessing the PDFs
+
+Go to the Actions tab in the repository, click on the latest workflow run, and download the artifacts.
+
+Unfortunately github automatically compress the artifacts.
