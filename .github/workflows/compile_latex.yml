@@ -1,4 +1,5 @@
 name: Compile LaTeX Documents
+
 on:
   push:
   pull_request:
@@ -21,12 +22,18 @@ jobs:
         working_directory: .
         args: -interaction=nonstopmode -file-line-error
         extra_system_packages: "biber"
+        latexmk_use_xelatex: true
         
     - name: Create output directory
       run: |
         mkdir -p compiled_pdfs
         cp LaTeX/*.pdf compiled_pdfs/ || true
-
+        
+    - name: List generated files
+      run: |
+        ls -la LaTeX/
+        ls -la compiled_pdfs/ || echo "No PDF files found in compiled_pdfs"
+        
     - name: Upload compiled PDFs as artifacts
       uses: actions/upload-artifact@v4
       with:
