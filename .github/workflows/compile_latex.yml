@@ -8,27 +8,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-      
+
     - name: Set up LaTeX environment
-      uses: xu-cheng/latex-action@v2
+      uses: xu-cheng/latex-action@3.1.0
       with:
         root_file: |
           lectures.tex
           classes.tex
         working_directory: LaTeX
-        args: -pdf -interaction=nonstopmode -file-line-error
         extra_system_packages: biber
-        compiler: pdflatex
-        
     - name: Create output directory and copy PDFs
       run: |
         mkdir -p compiled_pdfs
         cp LaTeX/*.pdf compiled_pdfs/ || echo "No PDFs to copy"
-        
+
     - name: Upload compiled PDFs as artifacts
       uses: actions/upload-artifact@v4
       with:
