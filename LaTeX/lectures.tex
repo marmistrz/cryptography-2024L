@@ -12,7 +12,7 @@
 \renewcommand{\thesubsection}{Lecture \arabic{section}.\arabic{subsection}}
 
 
-\title{Cryptography II\\ 2024/25}
+\title{Cryptography II\\ 2024/25}   
 \subtitle{\textcolor{red}{Lecture notes under construction}}
 \author{Stefan Dziembowski}
 
@@ -29,7 +29,7 @@
 
 \paragraph{Content:} We gave a general introduction to the elliptic curve cryptography and bilinear pairings. We defined elliptic curves and their group law, and we discussed the discrete logarithm problem in the context of elliptic curves. We also introduced the notion of bilinear pairings and discussed their applications in cryptography. We then presented the construction of the BLS signature scheme \cite{Boneh2001} (the proof was given in the exercise class after the lecture).
 
-\paragraph{Material:} We mostly followed the Boneh-Shoup book \cite{Cryptobook} (pages 615--618, second half of page 619, Section 15.4 until the middle of page 628). Another good reference are the online lectures \cite{WinterSchool} (lectures: ``School overview'' and ``The Basics of Pairings'').
+\paragraph{Material:} We mostly followed the Boneh-Shoup book \cite{Boneh2023} (pages 615--618, second half of page 619, Section 15.4 until the middle of page 628). Another good reference are the online lectures \cite{WinterSchool} (lectures: ``School overview'' and ``The Basics of Pairings'').
 
 
 
@@ -39,7 +39,7 @@
 
 \paragraph{Content:} We continued the discussion of bilinear pairings. We presented (a variant of) a construction of the Boneh-Franklin identity-based encryption scheme \cite{Boneh2003}.
 
-\paragraph{Material:} We again followed the Boneh-Shoup book \cite{Cryptobook} (pages 643--646 and 648-650, without a security proof, which was covered in the exercises). See also \cite{WinterSchool}, lecture ``Identity-Based Encryption and Variants''.
+\paragraph{Material:} We again followed the Boneh-Shoup book \cite{Boneh2023} (pages 643--646 and 648-650, without a security proof, which was covered in the exercises). See also \cite{WinterSchool}, lecture ``Identity-Based Encryption and Variants''.
 
 
 
@@ -55,7 +55,7 @@
 \section{Zero-Knowledge and Interactive Proofs (part 2)}
 \DATE{Mar 17}
 
-\paragraph{Content:}
+\paragraph{Content:} 
 We continued the introduction to zero-knowledge proofs and interactive proofs.
 
 \paragraph{Material:} We mostly followed the slides from the previous course, see \cite{ZK}  (slides 39--50, 65--80). See also material available at \cite{ZKlearning}, lecture 01/17.
@@ -67,7 +67,7 @@ We continued the introduction to zero-knowledge proofs and interactive proofs.
 \section{Zero-Knowledge and Interactive Proofs (part 3)}
 \DATE{Mar 24}
 
-\paragraph{Content:}
+\paragraph{Content:} 
 We continued the general discussion on zero-knowledge proofs and interactive proofs and started an introduction to SNARKS.
 
 \paragraph{Material:} We mostly followed the slides from the previous course, see \cite{ZK}  (slides 81--93). Then, we used the slides from \cite{ZKlearning}, lecture 01/24 (``Overview of Modern SNARK Constructions'', slide 34) and lecture 02/14 (``Plonk Interactive Oracle Proofs (IOP)'', slides 1--10 and 15--22).
@@ -78,7 +78,7 @@ We continued the general discussion on zero-knowledge proofs and interactive pro
 \section{Zero-Knowledge and Interactive Proofs (part 4)}
 \DATE{Mar 31}
 
-\paragraph{Content:}
+\paragraph{Content:} 
 We presented the definition of knowledge soundness and then started a construction of the PLONK SNARK.
 
 
@@ -96,6 +96,11 @@ We presented the definition of knowledge soundness and then started a constructi
 
 \section{Secure Two-Party and Multiparty Computations (part 2)}
 \DATE{Apr 28}
+
+\paragraph{Content:} 
+We continued the introduction to secure two-party computations. We discussed the impossibility of secure two-party computation in the information-theoretic setting, we presented construction of the Rabin's oblivious transfer protocol from the problem of computing square roots in the RSA group. We started the discussion on the Yao's garbled circuits protocol.
+
+\paragraph{Material:} We followed \cite{MPC}, slides 16-50 (for the information-theoretic impossibility, see also \cite{Wichs17}, Section 2.2).
 
 \section{Secure Two-Party and Multiparty Computations (part 3)}
 \DATE{May 05}
