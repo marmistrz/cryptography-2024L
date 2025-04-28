@@ -29,7 +29,7 @@
 
 \begin{itemize}
     \item Tripartite Diffie-Hellman key exchange \cite[Section 3.2]{tdh}.
-    \item Proof of the BLS signature scheme \cite[Theorem 15.1]{Boneh2023}.
+    \item Proof of the BLS signature scheme \cite[Theorem 15.1]{Cryptobook}.
 \end{itemize}
 
 
@@ -38,8 +38,8 @@
 \DATE{Mar 03/05}
 
 \begin{itemize}
-    \item Searching on PKE-encrypted data from IBE \cite[Section 15.6.4.3]{Boneh2023}.
-    \item Proof of the Boneh-Franklin IBE scheme \cite[Theorem 15.6]{Boneh2023}.
+    \item Searching on PKE-encrypted data from IBE \cite[Section 15.6.4.3]{Cryptobook}.
+    \item Proof of the Boneh-Franklin IBE scheme \cite[Theorem 15.6]{Cryptobook}.
 \end{itemize}
 
 
@@ -67,7 +67,7 @@
 \textbf{Simulators and Schwartz-Zippel lemma}
 \begin{itemize}
 	\item Simulator for 3-colouring ($n|E|$ rounds and constant round - HOMEWORK ZK: for parallelized protocol)
-	\item Schwartz-Zippel lemma with proof (will be reminded during lecture)	
+	\item Schwartz-Zippel lemma with proof (will be reminded during lecture)
 \end{itemize}
 
 \section{Zero-Knowledge and Interactive Proofs (part 3)}
@@ -94,14 +94,28 @@
 \begin{itemize}
 	\item Powers-of-Tau Ceremony
 	\item Prescribed permutation check lemma
-	\item zk-KZG (will be continued on the next classes) 
+	\item zk-KZG (will be continued on the next classes)
 \end{itemize}
 
 \section{Secure Two-Party and Multiparty Computations (part 1)}
 \DATE{Apr 14}
+\begin{itemize}
+	\item Various properties of MPC (correctness, privacy, independence of inputs, GOD, fairness) \cite{LindellMPC}
+	\item Definition of semi-honest MPC (started)
+	\item Rabin's OT is equivalent to $(2,1)$-OT, MPC implies OT
+	\item MPC implies ZK
+\end{itemize}
 
 \section{Secure Two-Party and Multiparty Computations (part 2)}
 \DATE{Apr 28}
+\begin{itemize}
+	\item Finished the definition of semi-honest and malicious MPC
+	\item GQ protocol for proving knowledge of a square root in an RSA group \cite[Section 19.5.5]{Cryptobook}
+	\item Commitments from $(2,1)$-OT
+	\item MPC for sum from secret-sharing
+	\item BGW protocol for MPC (sketched the degree reduction procedure)
+\end{itemize}
+
 
 \section{Secure Two-Party and Multiparty Computations (part 3)}
 \DATE{May 05}
